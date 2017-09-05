@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+  <br/>
+  <ul class="recipes">
+  {% for recipe in recipes %}
+    <li><a href={{ recipe.id }}><h2>{{ recipe.name }}</h2></a></li>
+  {% else %}
+    <li><em>Unbelievable.  No recipes here so far</em></li>
+  {% endfor %}
+  </ul>
+  <br/><br/>
+  <h3>Search Recipe</h3>
+  <form action="{{ url_for('search_recipe') }}" method="post">
+    <dl>
+      <dt>Name :
+      <input type="text" size="30" name="name"><input type="submit" value="Search">
+    </dl>
+  </form>
+  <br/><br/>
+  <h3>Add Recipe</h3>
+  <form action="{{ url_for('add_entry') }}" method="post" class="add-recipe">
+    <dl>
+      <dt>Name :
+      <dd><input type="text" size="30" name="name">
+      <dt>Ingredients :
+      <dd><textarea name="ingredients" rows="5" cols="40"></textarea>
+      <dd><input type="submit" value="Add">
+    </dl>
+  </form>
+{% endblock %}

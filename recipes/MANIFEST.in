@@ -1,0 +1,3 @@
+graft recipes/templates
+graft recipes/static
+include recipes/schema.sql

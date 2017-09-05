@@ -1,0 +1,17 @@
+MANIFEST.in
+README
+setup.cfg
+recipes/__init__.py
+recipes/recipes.py
+recipes/schema.sql
+recipes.egg-info/PKG-INFO
+recipes.egg-info/SOURCES.txt
+recipes.egg-info/dependency_links.txt
+recipes.egg-info/requires.txt
+recipes.egg-info/top_level.txt
+recipes/static/style.css
+recipes/templates/.DS_Store
+recipes/templates/layout.html
+recipes/templates/search_recipes.html
+recipes/templates/show_recipe.html
+recipes/templates/show_recipes.html

@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h1>Search Recipes</h1>
+  <br/>
+  <ul class="recipes">
+  {% for recipe in recipes %}
+    <li><a href={{ recipe.id }}><h2>{{ recipe.name }}</h2></a></li>
+  {% else %}
+    <li><em>No recipes found</em></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
